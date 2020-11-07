@@ -32,6 +32,22 @@ public class calculator extends javax.swing.JFrame {
                 Double.parseDouble(jtxtdisplay.getText());
         jtxtdisplay.setText(Double.toString(ans));
         break;
+        
+            case 2:
+                ans = number - Double.parseDouble(jtxtdisplay.getText());
+                 jtxtdisplay.setText(Double.toString(ans));
+                 break;
+            case 3:
+            ans = number / Double.parseDouble(jtxtdisplay.getText());
+                 jtxtdisplay.setText(Double.toString(ans));
+                 break;
+       case 4 :  
+                 ans = number * Double.parseDouble(jtxtdisplay.getText());
+                 jtxtdisplay.setText(Double.toString(ans));
+                 break;
+
+                
+                
         }
             
     }
@@ -174,26 +190,56 @@ public class calculator extends javax.swing.JFrame {
         jButton12.setBackground(new java.awt.Color(255, 0, 51));
         jButton12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton12.setText("-");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setBackground(new java.awt.Color(255, 0, 51));
         jButton13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton13.setText("+");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setBackground(new java.awt.Color(255, 0, 51));
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton14.setText("/");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setBackground(new java.awt.Color(255, 0, 51));
         jButton15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton15.setText("*");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         jButton16.setBackground(new java.awt.Color(255, 0, 51));
         jButton16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton16.setText(".");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setBackground(new java.awt.Color(255, 0, 51));
         jButton17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton17.setText("=");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -277,11 +323,12 @@ public class calculator extends javax.swing.JFrame {
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -358,6 +405,72 @@ public class calculator extends javax.swing.JFrame {
         //awil mohamud coding
         jtxtdisplay.setText(jtxtdisplay.getText() + "0");
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        number = Double.parseDouble(  jtxtdisplay.getText());
+
+        calculation = 4;
+
+          jtxtdisplay.setText("");
+
+          jLabel1.setText(number + "+");
+
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        number = Double.parseDouble(  jtxtdisplay.getText());
+
+        calculation = 2;
+
+          jtxtdisplay.setText("");
+
+          jLabel1.setText(number + "+");
+
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+       //equal awil coding
+      // jtxtdisplay.setText(jtxtdisplay.getText() + "=");
+      arthmetic_operation();
+       //arithmetic_operation();
+        //jLabel1.setText("");
+        
+
+
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        // awil coding calculation one + addition
+        number = Double.parseDouble(  jtxtdisplay.getText());
+
+        calculation = 1;
+
+          jtxtdisplay.setText("");
+
+          jLabel1.setText(number + "+");
+
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        number = Double.parseDouble(  jtxtdisplay.getText());
+
+        calculation = 3;
+
+          jtxtdisplay.setText("");
+
+          jLabel1.setText(number + "+");
+
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        //dot
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
